@@ -6,7 +6,7 @@
     "files",
     "FileList"
   ],
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "lib/set-input-files.min.js",
   "module": "lib/set-input-files.min.mjs",
   "unpkg": "lib/set-input-files.min.js",
