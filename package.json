@@ -58,7 +58,7 @@
     "prettier": "^1.18.2",
     "puppeteer": "^1.18.0",
     "rimraf": "^2.6.3",
-    "rollup": "^1.15.6",
+    "rollup": "^1.16.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-terser": "^5.0.0"
   },
