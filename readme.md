@@ -4,6 +4,7 @@
 [![downloads](https://img.shields.io/npm/dm/set-input-files.svg?style=flat-square)](https://www.npmtrends.com/set-input-files)
 [![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/set-input-files/lib/)
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/set-input-files/badge)](https://www.jsdelivr.com/package/npm/set-input-files)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffisker%2Fset-input-files.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffisker%2Fset-input-files?ref=badge_shield)
 
 [![Build Status](https://img.shields.io/travis/fisker/set-input-files.svg?style=flat-square)](https://travis-ci.org/fisker/set-input-files)
 [![Code Coverage](https://img.shields.io/codecov/c/github/fisker/set-input-files.svg?style=flat-square)](https://codecov.io/github/fisker/set-input-files)
@@ -45,3 +46,7 @@ setInputFiles(input[, files])
 ### files
 
 Array&lt;file&gt;
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffisker%2Fset-input-files.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffisker%2Fset-input-files?ref=badge_large)
