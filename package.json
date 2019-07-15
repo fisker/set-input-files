@@ -19,19 +19,20 @@
   },
   "license": "MIT",
   "scripts": {
-    "release": "run-s clean lint build test format dist",
-    "clean": "rimraf lib",
     "build": "run-p build:*",
     "build:js": "rollup --config",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue}",
-    "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
+    "clean": "rimraf lib",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
-    "test": "ava",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
+    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
+    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "release": "run-s clean lint build test format dist",
+    "test": "ava"
   },
   "files": [
     "lib"
