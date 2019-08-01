@@ -1,9 +1,12 @@
 import {terser} from 'rollup-plugin-terser'
 import babel from 'rollup-plugin-babel'
+import resolve from 'rollup-plugin-node-resolve'
 
 const input = 'src/index.js'
 const name = 'setInputFiles'
 const filename = 'set-input-files'
+const plugins = [babel(), resolve()]
+
 const umdBuild = {
   input,
   output: {
@@ -11,7 +14,7 @@ const umdBuild = {
     format: 'umd',
     name,
   },
-  plugins: [babel()],
+  plugins,
 }
 
 const esmBuild = {
@@ -20,10 +23,7 @@ const esmBuild = {
     file: `lib/${filename}.mjs`,
     format: 'esm',
   },
-  plugins: [
-    // do we need babel ?
-    babel(),
-  ],
+  plugins,
 }
 
 function minify(bundle) {

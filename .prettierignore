@@ -26,4 +26,5 @@ dist/**
 coverage/**
 
 # project glob
+lib/**
 
