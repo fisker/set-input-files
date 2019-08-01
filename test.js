@@ -60,13 +60,6 @@ async function testEsm(page, file) {
   return page.evaluate(testScript)
 }
 
-test('src', withPage, async (t, page) => {
-  const results = await testEsm(page, './src/index.js')
-  for (const [, result] of Object.entries(results)) {
-    t.true(result)
-  }
-})
-
 test('esm build', withPage, async (t, page) => {
   const results = await testEsm(page, './lib/set-input-files.mjs')
   for (const [, result] of Object.entries(results)) {
