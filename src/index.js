@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import createFileList from 'create-file-list/lib/create-file-list.mjs'
+import createFileList from 'create-file-list/dist/create-file-list.mjs'
 
 function setInputFiles(input, files) {
   input.files = createFileList(files)
