@@ -1,8 +1,8 @@
 # set-input-files
 
-[![gzip size](http://img.badgesize.io/https://unpkg.com/set-input-files/lib/set-input-files.min.mjs?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/set-input-files/lib/)
+[![gzip size](http://img.badgesize.io/https://unpkg.com/set-input-files/dist/set-input-files.min.mjs?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/set-input-files/dist/)
 [![downloads](https://img.shields.io/npm/dm/set-input-files.svg?style=flat-square)](https://www.npmtrends.com/set-input-files)
-[![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/set-input-files/lib/)
+[![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/set-input-files/dist/)
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/set-input-files/badge)](https://www.jsdelivr.com/package/npm/set-input-files)
 
 [![Build Status](https://img.shields.io/travis/fisker/set-input-files.svg?style=flat-square)](https://travis-ci.org/fisker/set-input-files)

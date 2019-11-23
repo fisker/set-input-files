@@ -7,10 +7,10 @@
     "FileList"
   ],
   "version": "1.0.1",
-  "main": "lib/set-input-files.min.js",
-  "module": "lib/set-input-files.min.mjs",
-  "unpkg": "lib/set-input-files.min.js",
-  "jsdelivr": "lib/set-input-files.min.js",
+  "main": "dist/set-input-files.min.js",
+  "module": "dist/set-input-files.min.mjs",
+  "unpkg": "dist/set-input-files.min.js",
+  "jsdelivr": "dist/set-input-files.min.js",
   "repository": "git@github.com:fisker/set-input-files.git",
   "author": {
     "name": "fisker Cheung",
@@ -21,12 +21,14 @@
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
-    "clean": "rimraf lib",
+    "clean": "run-p clean:*",
+    "clean:dist": "del-cli dist",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
+    "format:markdown": "yarn lint:markdown --fix",
+    "format:prettier": "yarn lint:prettier --write",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
@@ -36,7 +38,7 @@
     "test-coverage": "nyc ava"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "devDependencies": {
     "@babel/core": "7.7.4",
@@ -52,6 +54,7 @@
     "create-file-list": "1.0.0",
     "create-test-server": "3.0.1",
     "cz-conventional-changelog": "3.0.2",
+    "del-cli": "3.0.0",
     "eslint": "6.7.0",
     "esm": "3.2.25",
     "husky": "3.1.0",
@@ -61,7 +64,6 @@
     "nyc": "14.1.1",
     "prettier": "1.19.1",
     "puppeteer": "2.0.0",
-    "rimraf": "3.0.0",
     "rollup": "1.27.4",
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-node-resolve": "5.2.0",

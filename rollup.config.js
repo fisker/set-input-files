@@ -10,7 +10,7 @@ const plugins = [babel(), resolve()]
 const umdBuild = {
   input,
   output: {
-    file: `lib/${filename}.js`,
+    file: `dist/${filename}.js`,
     format: 'umd',
     name,
   },
@@ -20,7 +20,7 @@ const umdBuild = {
 const esmBuild = {
   input,
   output: {
-    file: `lib/${filename}.mjs`,
+    file: `dist/${filename}.mjs`,
     format: 'esm',
   },
   plugins,
