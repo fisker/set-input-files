@@ -1,23 +1,27 @@
 {
   "name": "set-input-files",
+  "version": "1.0.2",
   "description": "set HTMLInputElement files",
   "keywords": [
+    "FileList",
     "HTMLInputElement",
-    "files",
-    "FileList"
+    "files"
   ],
-  "version": "1.0.2",
-  "main": "dist/set-input-files.min.js",
-  "module": "dist/set-input-files.min.mjs",
-  "unpkg": "dist/set-input-files.min.js",
-  "jsdelivr": "dist/set-input-files.min.js",
   "repository": "git@github.com:fisker/set-input-files.git",
+  "license": "MIT",
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
-  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "dist/set-input-files.min.js",
+  "jsdelivr": "dist/set-input-files.min.js",
+  "unpkg": "dist/set-input-files.min.js",
+  "module": "dist/set-input-files.min.mjs",
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
@@ -28,18 +32,37 @@
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
     "format:markdown": "yarn lint:markdown --fix",
+    "format:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
     "format:prettier": "yarn lint:prettier --write",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:package-json": "yarn run format:package-json --check",
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s clean lint build test format dist",
     "test": "ava",
     "test-coverage": "nyc ava"
   },
-  "files": [
-    "dist"
-  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "ava": {
+    "require": "esm",
+    "verbose": true
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "require": "esm"
+  },
   "devDependencies": {
     "@babel/core": "7.7.4",
     "@babel/preset-env": "7.7.4",
@@ -67,31 +90,11 @@
     "rollup": "1.27.8",
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-node-resolve": "5.2.0",
-    "rollup-plugin-terser": "5.1.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "ava": {
-    "verbose": true,
-    "require": "esm"
-  },
-  "nyc": {
-    "all": true,
-    "require": "esm",
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "include": [
-      "src/**"
-    ]
+    "rollup-plugin-terser": "5.1.2",
+    "sort-package-json": "1.30.0"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "sideEffects": false
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

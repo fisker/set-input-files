@@ -11,6 +11,7 @@ on:
 jobs:
   test:
     strategy:
+      fail-fast: false
       matrix:
         PLATFORM:
           - "ubuntu-latest"
@@ -48,19 +49,12 @@ jobs:
       - name: Run Test
         run: yarn test-coverage
 
-      - name: Upload Coverage Parallel
+      - name: Upload Coverage
         uses: coverallsapp/github-action@master
         if: success()
+        continue-on-error: true
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          parallel: true
-
-      - name: Upload Coverage Finished
-        uses: coverallsapp/github-action@master
-        if: success()
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          parallel-finished: true
 
   lint:
     name: Lint
