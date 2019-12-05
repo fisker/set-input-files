@@ -1,6 +1,6 @@
 import {terser} from 'rollup-plugin-terser'
 import babel from 'rollup-plugin-babel'
-import resolve from 'rollup-plugin-node-resolve'
+import resolve from '@rollup/plugin-node-resolve'
 
 const input = 'src/index.js'
 const name = 'setInputFiles'
