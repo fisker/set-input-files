@@ -7,7 +7,12 @@
     "HTMLInputElement",
     "files"
   ],
-  "repository": "git@github.com:fisker/set-input-files.git",
+  "homepage": "https://github.com/fisker/set-input-files#readme",
+  "bugs": {
+    "url": "https://github.com/fisker/set-input-files/issues"
+  },
+  "repository": "fisker/set-input-files",
+  "funding": "https://github.com/fisker/set-input-files?sponsor=1",
   "license": "MIT",
   "author": {
     "name": "fisker Cheung",
