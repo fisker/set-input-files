@@ -18,8 +18,8 @@ jobs:
           # - "macos-latest"
           # - "windows-latest"
         node_version:
-          # - "13"
-          - "12"
+          - "14"
+          # - "12"
           # - "10"
         # exclude:
         #   - os: "macos-latest"
@@ -42,7 +42,6 @@ jobs:
       # puppeteer@3 requires these
       - name: Install System Dependencies
         run: sudo apt-get install libgbm1
-
       - name: Install Dependencies
         run: yarn
 
@@ -85,8 +84,6 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@master
-        with:
-          node-version: "12"
 
       - name: Install Dependencies
         run: yarn
@@ -105,8 +102,6 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@master
-        with:
-          node-version: "12"
 
       - name: Install Dependencies
         run: yarn
