@@ -46,10 +46,10 @@ async function testEsm(page, file) {
     response.type('text/html')
     response.end(`
       <script type="module">
-      import setInputFiles from '${file}'
-      window.setInputFiles = setInputFiles
+        import setInputFiles from '${file}'
+        window.setInputFiles = setInputFiles
       </script>
-      `)
+    `)
   })
   server.get(file.slice(1), (request, response) => {
     response.type('text/javascript')

@@ -2,7 +2,7 @@ import {terser} from 'rollup-plugin-terser'
 import babel from 'rollup-plugin-babel'
 import resolve from '@rollup/plugin-node-resolve'
 
-const input = 'src/index.js'
+const input = 'src/index.mjs'
 const name = 'setInputFiles'
 const filename = 'set-input-files'
 const plugins = [babel(), resolve()]
