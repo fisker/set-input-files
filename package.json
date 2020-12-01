@@ -1,6 +1,6 @@
 {
   "name": "set-input-files",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "set HTMLInputElement files",
   "keywords": [
     "FileList",
